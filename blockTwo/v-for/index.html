@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>V-for</title>
+</head>
+<body>
+
+    <div id="app">
+        <h2>Looping through lists</h2>
+
+        <ul>
+            <li v-for="character in characters">{{ character }}</li>
+        </ul>
+
+        <ul>
+            <li v-for="(ninja, index) in ninjas">{{ index }}. {{ ninja.name }} - {{ ninja.age }}</li>
+        </ul>
+        <!-- v-for will loop through either and display. it will make a div for each loop it makes -->
+        <div v-for="(ninja, index) in ninjas">
+            <h3>{{ index }}. {{ ninja.name }}</h3>
+            <p>{{ ninja.age }}</p>
+        </div>
+        <hr>
+        <!-- <template v-for="(ninja, index) in ninjas">
+            <h3>{{ index }}. {{ ninja.name }}</h3>
+            <p>{{ ninja.age }}</p>
+        </template> -->
+        <!-- template does the same as in the div except it doesnt make new divs each time and removes the amount of mark up needed -->
+
+        <template v-for="ninja in ninjas">
+            <div v-for="(val, key) in ninja">
+                <p>{{ key }} - {{ val }}</p>
+            </div>
+        </template>
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
