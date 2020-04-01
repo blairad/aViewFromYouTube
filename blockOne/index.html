@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue Js tutorials</title>
+    <title>intro to two way binding</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
@@ -13,14 +13,14 @@
 <body>
     <div id="vue-app">
 
-        <h1>{{greet('Evening')}}</h1>
+        <h1>{{ greet('Evening') }}</h1>
 
         <p>Name: {{name}}</p>
         <p>Job: {{job}}</p>
 
         <h2>Data Binding</h2>
         <a v-bind:href="website">my website</a>
-        <input type="text" v-bind:value="name">
+        <input type="text" v-bind:value="job">
         <!-- the v-bind can be replaced with just : and the value="name" binds it to the data in app.js -->
         <p v-html="websiteTag"></p>
 

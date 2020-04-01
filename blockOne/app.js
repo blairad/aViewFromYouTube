@@ -31,7 +31,9 @@ new Vue({
         updateXY: function(event){
             //offsetX/Y are taken from the top left of the canvas made from the div
             this.x = event.offsetX;
+            // this.x = event.pageX;
             this.y = event.offsetY;
+            // this.y = event.pageY;
         },
         // KEYBOARD EVENTS
         click: function(){
