@@ -1,20 +1,21 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <p>{{ greeting() }}</p>
+    <ninjas></ninjas> 
+    <!-- ninjas component has the data from the Ninjas.vue -->
   </div>
 </template>
 
 <script>
+import Ninjas from './Ninjas.vue'
+//this is a local export global in main.js
 export default {
+  components: {
+    'ninjas': Ninjas
+  },
   data () {
     return {
-      title: 'First Vue file'
-    }
-  },
-  methods: {
-    greeting() {
-      return 'hello'
+      title: 'Ninja App'
     }
   }
 }
