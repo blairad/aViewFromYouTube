@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <h2>{{ title }}</h2>
+    <h2>{{ copyright }}  {{ title }}</h2>
   </footer>
 </template>
 
@@ -8,12 +8,14 @@
 
 
 export default {
-  components: {
-    
+  props: {
+    title: {
+      type: String
+    }
   },
   data () {
     return {
-        title: 'Footer'
+        copyright: 'Net Ninja Tutorials:'
     }
   }
 }
