@@ -14,21 +14,18 @@
 
 <script>
 export default {
-
-  components: {},
+  props: {
+      ninjas: {
+          type: Array,
+          required: true
+      }
+  },
 
   data() {
     return {
-      ninjas: [
-        { name: "Ryu", speciality: "Vue", show: false },
-        { name: "Ken", speciality: "React", show: false },
-        { name: "Splinter", speciality: "Patience", show: false },
-        { name: "Kung Fu Panda", speciality: "Eating", show: false },
-        { name: "Hattori Hanzō", speciality: "Actual Ninja", show: false },
-        { name: "Princess Mononoke", speciality: "Spirit", show: false },
-      ],
-    };
-  },
+      
+    }
+  }
 };
 </script>
 
