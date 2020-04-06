@@ -18,7 +18,8 @@ export default {
   },
   methods: {
     changeTitle: function(){
-      this.title = "Vue Wizards"
+      this.$emit('changeTitle', "Vue Wizards")
+      // {(1)}  on the click we are firing this function. this refers to the component. on the click we are emiting upwards using the $emit. the event is called changeTitle and  the data we are sending with the event is a string of "Vue Wizards"
     }
   }
 }
